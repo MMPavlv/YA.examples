@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Settings</title>
+    </head>
+    <body>
+
+    <script>
+		function tableCreate() {
+			let body = document.body;
+			let tbl = document.createElement('table');
+			let size = 3;
+			tbl.setAttribute("id", "table");
+
+			tbl.style.border = '1px solid black';
+
+			for (let i = 0; i < size; i++) {
+				let tr = tbl.insertRow();
+				for (let j = 0; j < size; j++) {
+					let td = tr.insertCell();
+					let inp = document.createElement("input");
+
+					inp.setAttribute("type", "number");
+					inp.setAttribute("class", "matrix-input");
+					inp.setAttribute("min", "0");
+					inp.setAttribute("value", "0");
+					inp.setAttribute("id",i+"_"+j);
+					td.appendChild(inp);
+					//alert(document.getElementsByName(i+"_"+j).value);
+				}
+			}
+			body.appendChild(tbl);
+			alert(document.getElementsByName(0+"_"+0).value);
+		}
+
+		tableCreate();
+
+    </script>
+
+    </body>
+</html>

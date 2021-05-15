@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="CryptoLabUI.Page3_View"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CryptoLabUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <RelativePanel>
+            <TextBlock Text="Raise the number to the power on modulo" x:Name="Name1" RelativePanel.AlignTopWith="Ex1" Margin="24,0,0,0"/>
+            <TextBox x:Name="Ex1" PlaceholderText="Number" Margin="24,24,0,0" MaxLength="50" Width="200" HorizontalAlignment="Left" BeforeTextChanging="TextBox_OnBeforeTextChanging"/>
+            <TextBox x:Name="Ex2" PlaceholderText="Power" Margin="24,24,0,0" MaxLength="50" Width="200" HorizontalAlignment="Left" BeforeTextChanging="TextBox_OnBeforeTextChanging" RelativePanel.Below="Ex1"/>
+            <TextBox x:Name="Ex3" PlaceholderText="Modulo" Margin="24,24,0,0" MaxLength="50" Width="200" HorizontalAlignment="Left" BeforeTextChanging="TextBox_OnBeforeTextChanging" RelativePanel.Below="Ex2"/>
+            <Button Margin="24,24,0,0" RelativePanel.RightOf="Ex3" RelativePanel.Below="Ex2" Click="Evaluate">Evaluate</Button>
+            <TextBlock x:Name="OutBlock" Margin="24,24,0,0" RelativePanel.Below="Ex3"></TextBlock>
+        </RelativePanel>
+    </Grid>
+</Page>

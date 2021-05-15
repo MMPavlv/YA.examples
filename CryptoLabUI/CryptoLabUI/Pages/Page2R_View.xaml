@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="CryptoLabUI.Page2R_View"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CryptoLabUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="0">
+            <TextBox x:Name="TextIn" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" />
+        </ScrollViewer>
+
+        <Pivot x:Name="rootPivot"   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <PivotItem Header="Encrypted Text">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBox x:Name="TextEn" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" />
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem Header="Decrypted Text">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="0">
+                        <TextBox x:Name="Text1" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" />
+                    </ScrollViewer>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="1">
+                        <TextBox x:Name="Text2" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" />
+                    </ScrollViewer>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="0">
+                        <TextBox x:Name="Text3" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" />
+                    </ScrollViewer>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="1">
+                        <TextBox x:Name="Text4" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" />
+                    </ScrollViewer>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+        <RelativePanel Grid.Row="1" Grid.Column="0">
+            <TextBox x:Name="TextA" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,24,0,24"  MaxLength="50" Width="200" BeforeTextChanging="TextBox_OnBeforeTextChanging"/>
+            <TextBox x:Name="TextB" RelativePanel.Below="TextA" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,6,0,24"  MaxLength="50" Width="200" BeforeTextChanging="TextBox_OnBeforeTextChanging"/>
+            <TextBox x:Name="TextC" RelativePanel.Below="TextB" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,6,0,24"  MaxLength="50" Width="200" BeforeTextChanging="TextBox_OnBeforeTextChanging"/>
+            <Button x:Name="Btn1" RelativePanel.Below="TextC" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Click="Encrypt">Encrypt =></Button>
+            <Button RelativePanel.Below="Btn1" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,24,0,0" Click="Decrypt">&lt;= Decrypt</Button>
+        </RelativePanel>
+    </Grid>
+</Page>

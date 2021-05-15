@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "n0",
+      "label": "jay",
+      "dept": "it"
+    },
+    {
+      "id": "n1",
+      "label": "yogi!",
+      "dept": "hr"
+    },
+    {
+      "id": "n2",
+      "label": "priya11",
+      "dept": "it"
+    },
+    {
+      "id": "n3",
+      "label": "dumpy",
+      "dept": "hr"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "target": "n1",
+      "type": "curvedArrow",
+      "weight": "10"
+    },
+    {
+      "id": "e1",
+      "source": "n2",
+      "target": "n3",
+      "type": "curvedArrow",
+      "weight": "20"
+    },
+    {
+      "id": "e3",
+      "source": "n2",
+      "target": "n1",
+      "type": "curvedArrow",
+      "weight": "30"
+    },
+    {
+      "id": "e2",
+      "source": "n0",
+      "target": "n3",
+      "type": "curvedArrow",
+      "weight": "40"
+    },
+    {
+      "id": "e4",
+      "source": "n1",
+      "target": "n3",
+      "type": "curve",
+      "weight": "50"
+    },
+    {
+      "id": "e5",
+      "source": "n1",
+      "target": "n3",
+      "type": "curve",
+      "weight": "60"
+    },
+    {
+      "id": "e6",
+      "source": "n1",
+      "target": "n3",
+      "type": "curve",
+      "weight": "70"
+    },
+    {
+      "id": "e7",
+      "source": "n1",
+      "target": "n3",
+      "type": "curve",
+      "weight": "80"
+    }
+  ]
+}
